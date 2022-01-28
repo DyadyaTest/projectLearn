@@ -1,5 +1,20 @@
 "use strict";
 
+const slides = document.querySelectorAll('.slide');
+
+for (const slide of slides) {
+        slide.addEventListener('click', () => {
+                clearActiveClasses();
+        slide.classList.add('active');
+        });
+}
+
+function clearActiveClasses() {
+        slides.forEach ((slide) => {
+                slide.classList.remove('active');
+        });
+}
+
 // let number = 5;
 // const leftBorderWidth = 1;
 
@@ -41,7 +56,7 @@
 
 //     incr++;
 
-const isChecked = true,
-        isClose = false;
+// const isChecked = true,
+//         isClose = false;
 
-console.log(isChecked || isClose);
+// console.log(isChecked || isClose);
